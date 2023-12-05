@@ -1,17 +1,23 @@
 [package]
-name = "rust-template"
+name = "etalia"
 version = "0.1.0"
 authors = [
-	"First Name Last Name, <yourname@gmail.com>",
-	"Another Person <anotherperson@outlook.com>"
+	"Samantha Nguyen, <contact@samanthanguyen.me>"
 ]
-description = "Your description of the Rust library"
+description = "a parser and formatter for citations"
 readme = "README.md"
 license = "MIT OR Apache-2.0"
 edition = "2021"
 rust-version = "1.70.0"
-# keywords = []
-# categories = []
+keywords = [
+	"citations",
+	"bibliography",
+]
+categories = [
+	"parser-implementations",
+	"text-processing",
+	"value-formatting",
+]
 exclude = [
 	".devcontainer",
 	".github",

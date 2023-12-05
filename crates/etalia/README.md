@@ -1,4 +1,4 @@
-# {{library}}
+# etalia
 
 [![License](https://img.shields.io/badge/License-MIT%20%26%20Apache%202.0-blue)](#license)
 [![CI](https://github.com/neoncitylights/rust/actions/workflows/main.yml/badge.svg)](https://github.com/neoncitylights/rust/actions/workflows/main.yml)
@@ -10,7 +10,7 @@ Describe the library.
 ## Install
 
 ```shell
-cargo add {{library}}
+cargo add etalia
 ```
 
 ## License
