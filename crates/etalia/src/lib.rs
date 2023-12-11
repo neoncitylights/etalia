@@ -1,21 +1,17 @@
-#[doc = include_str!("../README.md")]
+#![allow(dead_code)]
+#![allow(unused_mut)]
+#![allow(unused_variables)]
 
-/// Say hi to someone! <3
-pub fn greet(name: &str) -> String {
-	format!("Hello {}!", name)
-}
+mod errors;
+pub mod hir;
+pub mod lir;
+pub mod mir;
+mod symbol;
+pub mod visitors;
 
-#[cfg(test)]
-mod tests {
-	use crate::greet;
-
-	#[test]
-	fn greet_bob() {
-		assert_eq!(greet("Bob"), String::from("Hello Bob!"));
-	}
-
-	#[test]
-	fn greet_the_world() {
-		assert_eq!(greet("World"), String::from("Hello World!"));
-	}
-}
+pub use errors::*;
+pub use hir::*;
+pub use lir::*;
+pub use mir::*;
+pub use symbol::*;
+pub use visitors::*;
