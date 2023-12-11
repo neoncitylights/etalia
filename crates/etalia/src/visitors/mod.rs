@@ -1,12 +1,12 @@
 use crate::lir::LirTokenStream;
 use crate::mir::MirTokenStream;
 
-mod int_lit_visitor;
 mod bidi_delim_strings_visitor;
+mod int_lit_visitor;
 mod punct_terminal_visitor;
 mod quote_string_visitor;
-pub use int_lit_visitor::IntLitVisitor;
 pub use bidi_delim_strings_visitor::BidiDelimStringsVisitor;
+pub use int_lit_visitor::IntLitVisitor;
 pub use punct_terminal_visitor::PunctTerminalVisitor;
 pub use quote_string_visitor::QuoteStringVisitor;
 

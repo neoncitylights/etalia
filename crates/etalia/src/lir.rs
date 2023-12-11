@@ -292,13 +292,12 @@ mod tests_lir_token_stream {
 	#[test]
 	fn test_try_new_1() {
 		let stream = LirTokenStream::try_new("abc");
-		assert!(
-			stream.is_ok_and(|s| s.tokens == vec![
+		assert!(stream.is_ok_and(|s| s.tokens
+			== vec![
 				LirToken::Alpha('a'),
 				LirToken::Alpha('b'),
 				LirToken::Alpha('c')
-			])
-		);
+			]));
 	}
 
 	#[test]
@@ -334,9 +333,6 @@ mod tests_lir_token_stream {
 			LirToken::Alpha('c'),
 		];
 
-		assert_eq!(
-			LirTokenStream::from(tokens.clone()).tokens,
-			tokens.clone()
-		);
+		assert_eq!(LirTokenStream::from(tokens.clone()).tokens, tokens.clone());
 	}
 }

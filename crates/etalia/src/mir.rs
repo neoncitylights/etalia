@@ -92,8 +92,14 @@ mod tests_mir_token {
 
 	#[test]
 	fn test_lower_ints() {
-		assert_eq!(MirToken::Uint(0u32).lower(), LirTokenStream::try_new("0").unwrap());
-		assert_eq!(MirToken::Sint(0i32).lower(), LirTokenStream::try_new("0").unwrap());
+		assert_eq!(
+			MirToken::Uint(0u32).lower(),
+			LirTokenStream::try_new("0").unwrap()
+		);
+		assert_eq!(
+			MirToken::Sint(0i32).lower(),
+			LirTokenStream::try_new("0").unwrap()
+		);
 	}
 
 	#[test]
@@ -163,15 +169,30 @@ mod tests_mir_token {
 	#[test]
 	fn test_str_methods() {
 		assert_eq!(MirToken::str(""), MirToken::String(String::new()));
-		assert_eq!(MirToken::str("hello"), MirToken::String(String::from("hello")));
+		assert_eq!(
+			MirToken::str("hello"),
+			MirToken::String(String::from("hello"))
+		);
 
 		assert_eq!(MirToken::paren(""), MirToken::ParenString(String::new()));
-		assert_eq!(MirToken::paren("hello"), MirToken::ParenString(String::from("hello")));
+		assert_eq!(
+			MirToken::paren("hello"),
+			MirToken::ParenString(String::from("hello"))
+		);
 
 		assert_eq!(MirToken::brace(""), MirToken::BraceString(String::new()));
-		assert_eq!(MirToken::brace("hello"), MirToken::BraceString(String::from("hello")));
+		assert_eq!(
+			MirToken::brace("hello"),
+			MirToken::BraceString(String::from("hello"))
+		);
 
-		assert_eq!(MirToken::bracket(""), MirToken::BracketString(String::new()));
-		assert_eq!(MirToken::bracket("hello"), MirToken::BracketString(String::from("hello")));
+		assert_eq!(
+			MirToken::bracket(""),
+			MirToken::BracketString(String::new())
+		);
+		assert_eq!(
+			MirToken::bracket("hello"),
+			MirToken::BracketString(String::from("hello"))
+		);
 	}
 }
